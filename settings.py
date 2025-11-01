@@ -1,4 +1,4 @@
-IS_DEVELOPEMENT_MODE = True # CHANGE IT TO FALSE TO SUPPERSS THE STD_OUT
+IS_DEVELOPEMENT_MODE = False # CHANGE IT TO FALSE TO SUPPERSS THE STD_OUT
 
 LOGO_PATH = "./src/ASCII_LOGO.txt"
 
@@ -24,3 +24,9 @@ INSTALLED_APPS = [
     ]
 ]
 
+COLORS = {
+    "reset": "\033[0m",
+    "red": "\033[31m",
+    "green": "\033[32m",
+    "yellow": "\033[33m"
+}

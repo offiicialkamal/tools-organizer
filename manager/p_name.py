@@ -11,7 +11,7 @@ def p_name_by_link(link):
         return link
     except Exceptions as e:
         if IS_DEVELOPEMENT_MODE:
-            print("error on p_name_by_link "e)
+            print("error on p_name_by_link ", e)
         sys.exi()  
         
         

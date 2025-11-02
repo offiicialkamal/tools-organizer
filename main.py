@@ -2,7 +2,6 @@ import os
 import re
 import sys
 import time
-import requests
 import manager as MNJR
 from settings import IS_DEVELOPEMENT_MODE, LOGO_PATH, OWENER_INFO, INSTALLED_APPS, COLORS
 c_print=("all required modules has been installed sucessfully")
@@ -12,11 +11,12 @@ class main:
         self.__apps = apps
         self.__all_apps = dict()
         self.__LOGO_PATH = logo_path
-        self.__home_path = re.sub(r'/[^/]+$', repl="", string=os.getcwd())
+        self.__home_path = re.sub(r'/[^/]+$', repl="", string=os.getcwd() + "/")
 
     def start(self):
         # print(len(self.__apps))
         avilable_app_count = len(self.__apps)
+        self.show_logo()
         if avilable_app_count == 0: 
             MNJR.c_print("NO APPS ARE AVILABLE PLEASE Add SOME APPS TO THE SETTINGS.PY")
             sys.exit()
@@ -26,14 +26,15 @@ class main:
             p_data = self.__apps[i]
             p_name,p_key = p_data[0], p_data[1]
             self.__all_apps[p_name] = p_key
-            print(f"{'0'+str(i+1) if i<=10 else i+1} {self.extract_dir(link=p_name)} ")
+            dname = self.extract_dir(link=p_name)
+            print(f"{'0'+str(i+1) if i<=10 else i+1} {dname} {'' if self.is_installed(dname) else '( install )'}")
         ch = self.get_choice()
         self.handle_choice(ch) # now we have to check the scripts exists and run if really exists
 
     def extract_dir(self, ch=None, link=None):
         """ this function takes the link and returns the app dir from the provided link """
         def extract_from_link(link):
-            if not link.endswith('.git'):
+            if link.endswith('.git'):
                 path = link.split(".")[-2].split("/")[-1]
             else:
                 path = link.split("/")[-1]
@@ -103,11 +104,14 @@ class main:
         logo = None
         try:
             if os.path.exists(self.__LOGO_PATH):
-                with open(self.__LOGO_PATH, "w") as f_obj:
-                    logo = f_obj.read()
-                    print(logo)
+                # with open(self.__LOGO_PATH, "w") as f_obj:
+                #     logo = f_obj.read()
+                #     print(logo)
+
+                logo = MNJR.generate_logo("KAMAL")
+                print(logo)
         except Exception as e:
-            MNJR.c_print("error while reading the logo file ", e)
+            MNJR.c_print("error while reading the logo file : ", e)
             sys.exit()
             
 

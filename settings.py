@@ -1,27 +1,20 @@
-IS_DEVELOPEMENT_MODE = False # CHANGE IT TO FALSE TO SUPPERSS THE STD_OUT
+LOGO_STR = "KAMAL" # IT CONVERTS AUTOMETICALLY IN A ASCII LOGO EDIT IT AS NEEDED
 
-LOGO_PATH = "./src/ASCII_LOGO.txt"
-
+## THIS OINFORMATION WILL BE SHOWN AT THE BOTTOM OF THE LOGO
 OWENER_INFO = {
-    "name": "",    # mendatorty
-    "github": "",    # optional
-    "location": ""    # Optional
+    "name": "",  # mendatorty
+    "github": "",  # optional
+    "location": ""  # Optional
 }
 
+#################################################################################
+#################################################################################
 
+#### EACH APP/TOOL DATA IS INSIDE A PYTHON LIST ["APP LINK", "KEY OR BLANK"]
 INSTALLED_APPS = [
-    [
-        "https://github.com/hackesofice/Acode-live-server.git", 
-        "key_1"
-    ],
-    [
-        "https://github.com/hackesofice/Messanger-Ax.git",
-        "key_2"
-    ],
-    [
-        "https://github.com/hackesofice/Acode-Browser.git",
-        "key_3"
-    ]
+    ["https://github.com/hackesofice/Acode-live-server.git", "key_1"], 
+    ["https://github.com/hackesofice/Messanger-Ax.git", "key_2"],
+    ["https://github.com/hackesofice/Acode-Browser.git", "key_3"]
 ]
 
 COLORS = {
@@ -30,3 +23,10 @@ COLORS = {
     "green": "\033[32m",
     "yellow": "\033[33m"
 }
+
+
+
+#######################################################################
+####################### SETTINGS FOR CONTRIBUTERS #####################
+
+IS_DEVELOPEMENT_MODE = False # CHANGE IT TO FALSE TO SUPPERSS THE STD_OUT/OUTPUT

@@ -1,4 +1,7 @@
+from settings import IS_DEVELOPEMENT_MODE
 def c_print(*args):
-    for matter in args:
-        print(matter, end=" ")
-    print()
+    if IS_DEVELOPEMENT_MODE:
+        for matter in args:
+            print(matter, end=" ")
+        print()
+    

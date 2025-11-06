@@ -1,6 +1,6 @@
 import re
 import sys
-from settings import IS_DEVELOPEMENT_MODE
+from settings import GERNAL_SETTINGS
 
 def p_name_by_link(link):
     try:
@@ -10,7 +10,7 @@ def p_name_by_link(link):
             link = link.split("/")[-2]
         return link
     except Exceptions as e:
-        if IS_DEVELOPEMENT_MODE:
+        if GERNAL_SETTINGS.get('IS_DEVELOPEMENT_MODE'):
             print("error on p_name_by_link ", e)
         sys.exi()  
         

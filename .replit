@@ -4,4 +4,4 @@ expertMode = true
 
 [nix]
 channel = "stable-25_05"
-packages = ["nano", "python-launcher"]
+packages = ["cacert", "nano", "python-launcher"]

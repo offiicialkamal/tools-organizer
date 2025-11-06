@@ -1,7 +1,8 @@
-from settings import IS_DEVELOPEMENT_MODE
+from settings import GERNAL_SETTINGS
+
+
 def c_print(*args):
-    if IS_DEVELOPEMENT_MODE:
+    if GERNAL_SETTINGS.get('IS_DEVELOPEMENT'):
         for matter in args:
             print(matter, end=" ")
         print()
-    

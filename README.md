@@ -7,7 +7,13 @@ The tool is designed for developers, who have lots of tools but all are in sepra
   - fork the repository
   - open and edit the `settings.json`
 
+
 > [!NOTE]
-> fully edit the settings.json and for morfe security use any encryption tool like <a href="https://github.com/hackesofice/Encrypt-python.git" target="_blank"> this <a>
+> fully edit the settings.json and for more security use any encryption tool like <a href="https://github.com/hackesofice/Encrypt-python.git" target="_blank"> this <a> to encrypt your files if needed
+
+# Expected Project Structure
+
+This tool looks for a module called `your-project.main` which is an entrypoint of your tools an
+
 
 

@@ -1,19 +1,6 @@
 GERNAL_SETTINGS = {
-    "IS_DEVELOPEMENT": False,
-    
+    "IS_DEVELOPEMENT": False, # FOR MAX LOGS SET IT TO True    
 }
-
-###################################################################################
-###################################################################################
-###################################################################################
-
-LOGO_SETTINGS = {
-    "logo_text": "KAMAL",
-    "logo_font": "random",
-    "logo_color": "random"
-}
-
-# LOGO_STR = "KAMAL" # IT CONVERTS AUTOMETICALLY IN A ASCII LOGO EDIT IT AS NEEDED
 
 ## THIS OINFORMATION WILL BE SHOWN AT THE BOTTOM OF THE LOGO
 OWENER_INFO = {
@@ -22,15 +9,31 @@ OWENER_INFO = {
     "location": "Uttar Pradesh"  # Optional
 }
 
+
 #################################################################################
 #################################################################################
 
 #### EACH APP/TOOL DATA IS INSIDE A PYTHON LIST ["APP LINK", "KEY OR BLANK"]
+#### REMOVE THESE ALL LINKS AND ADD YOUR OWN PROJECTS
+#### YOU CAN ABLE TO INCRESE OR DCREASE THESE NUMBER OF PROJECT IN LIST 
+#### JUST ADD OR REMOVE LITS
 INSTALLED_APPS = [
     ["https://github.com/hackesofice/Acode-live-server.git", "key_1"], 
     ["https://github.com/hackesofice/Messanger-Ax.git", "key_2"],
     ["https://github.com/hackesofice/Acode-Browser.git", "key_3"]
 ]
+
+
+
+###################################################################################
+###################################################################################
+###################################################################################
+
+LOGO_SETTINGS = {
+    "logo_text": "KAMAL",
+    "logo_font": "random",         # YOU WILL FIND ALL SUPPORTED FONTS AND PREVIEWS INSIDE THE fonts DIRECTORY
+    "logo_color": "random"         # YOU CAN PROVIDE DIRECT ANSII COLOR CODE OR ANY NAME WHICH IS PROVIDED BELOW
+}
 
 COLORS = {
     # Reset

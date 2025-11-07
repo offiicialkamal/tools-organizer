@@ -5,7 +5,7 @@ import time
 import manager as MNJR
 from settings import GERNAL_SETTINGS, LOGO_SETTINGS, OWENER_INFO, INSTALLED_APPS, COLORS
 c_print=("all required modules has been installed sucessfully")
-
+os.system('clear')
 class main:
     def __init__(self, LOGO_SETTINGS, APPS, COLORS):
         self.__apps = APPS
@@ -108,11 +108,19 @@ class main:
     def show_logo(self):
         logo = "random"
         try:
-            if not GERNAL_SETTINGS.get("logo_color") or not self.__logo_settings.get("logo_color") == "random":
+            logo_color = self.__logo_settings.get("logo_color")
+            
+            if (not logo_color) or (logo_color == "random"):
                 color = MNJR.get_random_color(self.__colors)
             else:
-                color = self.__logo_settings.get("logo_color")    
-            
+                raw_color = self.__logo_settings.get("logo_color")
+                
+                if repr(raw_color).startswith("'\\"):
+                    color = raw_color
+                else:
+                    color = self.__colors.get(raw_color)
+                    color = color if color else "random"
+                    
             logo_text = self.__logo_settings.get('logo_text')
             logo_font = self.__logo_settings.get("logo_font") 
             logo = MNJR.generate_logo(logo_text, font=logo_font)

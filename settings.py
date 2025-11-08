@@ -30,7 +30,7 @@ INSTALLED_APPS = [
 ###################################################################################
 
 LOGO_SETTINGS = {
-    "logo_text": "PRANJUL",
+    "logo_text": "KAMAL",
     "logo_font": "random",         # YOU WILL FIND ALL SUPPORTED FONTS AND PREVIEWS INSIDE THE fonts DIRECTORY
     "logo_color": "random"         # YOU CAN PROVIDE DIRECT ANSII COLOR CODE OR ANY NAME WHICH IS PROVIDED BELOW
 }

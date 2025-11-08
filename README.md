@@ -1,4 +1,4 @@
-![ screenshot ](/screenshots/screenshot.png)
+![ screenshot ](https://github.com/offiicialkamal/tools-organizer/blob/main/Screenshots/Screenshot%20(1).png)
 # Desclaimer
 
 The tool is designed for developers, who have lots of tools but all are in seprate repositories. this tool helps to organize all the tools in a single place with a minimal efforts.
@@ -13,6 +13,7 @@ The tool is designed for developers, who have lots of tools but all are in sepra
 pkg install git -y
 git clone https://github.com/offiicialkamal/tools-organizer.git
 cd tools-organizer
+pip install -r requirements.txt
 python main.py
 ```
 

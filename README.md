@@ -9,8 +9,10 @@ The tool is designed for developers, who have lots of tools but all are in sepra
   - fork the repository
   - open and edit the `settings.json`
 
+#### Example setup for termux app
 ```
 pkg install git -y
+pkg install python -y
 git clone https://github.com/offiicialkamal/tools-organizer.git
 cd tools-organizer
 pip install -r requirements.txt
